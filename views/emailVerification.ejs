@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Email</title>
+    <link rel="stylesheet" href="">
+    <link src="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .table_header tbody {
+            width: 100%;
+            display: table;
+        }
+
+        .txt_right {
+            text-align: right;
+        }
+
+        .color_primary {
+            color: #000;
+            font-size: 19px;
+        }
+
+        .button_wrap {
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .button_wrap button {
+            background: #3c8dbc;
+            color: #fff;
+            border: 1px solid transparent;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0 20px;
+            height: 42px;
+            transition: 0.2s ease-in-out;
+        }
+
+        .button_wrap button:hover {
+            background: #367fa9;
+        }
+    </style>
+</head>
+
+<body style="background-color: #d6d6d5;margin:0;font-family: 'ClanPro-Book'">
+    <table width="100%" border="0" style="border:0;border-collapse:collapse;border-spacing:0;max-width:700px;margin:0 auto; background: #fff; padding: 25px; display: block;"
+        class="table_header">
+        <tbody>
+            <tr>
+                <td>Thank You for joining. </td>
+                <td class="txt_right">
+                    <img src="http://botssoft.com/colobo.png" alt="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="background-image: url(http://botssoft.com/bg-email.png);width: 100%; border:0;border-collapse:collapse;border-spacing:0;max-width:700px;margin:0 auto; display: block; padding:50px 25px;">
+        <tbody>
+            <tr>
+                <td class="color_primary">
+                    To continue your registration, you need to confirm your email id by clicking on following button
+                </td>
+            </tr>
+            <tr>
+                <td class="button_wrap">
+                    <button><a style="color:#fff; text-decoration: none" href=<%=info%>>Click Here To Verify Your Email</a></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Welcome & Thanks!</td>
+            </tr>
+            <tr>
+                <td>The Collobo Team</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

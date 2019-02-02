@@ -1,0 +1,157 @@
+<% include includes/header.ejs %>
+<% include includes/leftsidebar.ejs %>
+<div class="mainpanel">
+    <div class="contentpanel bg-grey">
+        <form method="POST" action="/web/adduser" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="" placeholder="Enter user first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="" placeholder="Enter user last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" value="" placeholder="Enter user email ex: xyz@abc.com" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile number</label>
+                        <input type="text" class="form-control number" id="mobile" name="mobile" value="" placeholder="Enter user mobile number" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="userName">User name</label>
+                        <input type="text" class="form-control" id="userName" name="userName" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" value="" placeholder="Enter user password" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="userRole">User role</label>
+                        <select id="userRole" name="userRole" class="form-control">
+                            <option value="ADMIN">Admin</option>
+                            <option value="USER">User</option>
+                            <option value="VENDOR">Vender</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" name="address" value="" placeholder="Enter user address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control number" id="phone" maxlength="10" name="phone" value="" placeholder="Enter user phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="pinCode">Pin code</label>
+                        <input type="text" class="form-control number" maxlength="6" id="pinCode" name="pinCode" value="" placeholder="Enter user pin code">
+                    </div>
+                </div>
+                <!-- middle part -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fax">Fax</label>
+                        <input type="text" class="form-control number" maxlength="10" id="fax" name="fax" value="" placeholder="Enter user fax number">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName">Company name</label>
+                        <input type="text" class="form-control" id="companyName" name="companyName" value="" placeholder="Enter user company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="aadharCardNumber">Aadhar card number</label>
+                        <input type="text" class="form-control number" maxlength="12" id="aadharCardNumber" name="aadharCardNumber" value="" placeholder="Enter user aadhar card number">
+                    </div>
+                    <div class="form-group">
+                        <label for="panCardNumber">Pan card number</label>
+                        <input type="text" class="form-control" id="panCardNumber" maxlength="10" name="panCardNumber" value="" placeholder="Enter user pancard number">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankAccountNumber">Bank account number</label>
+                        <input type="text" class="form-control number" maxlength="16" id="bankAccountNumber" name="bankAccountNumber" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankName">Bank name</label>
+                        <input type="text" class="form-control" id="bankName" name="bankName" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="ifsc">IFSC</label>
+                        <input type="text" class="form-control" id="ifsc" name="ifsc" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Product category</label>
+                        <input type="text" class="form-control" id="productCategory" name="productCategory" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyStartDate">Company start date</label>
+                        <input type="text" class="form-control" id="companyStartDate" name="companyStartDate" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="gstNo">GST number</label>
+                        <input type="text" class="form-control" id="gstNo" name="gstNo" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="text" class="form-control" id="website" name="website" value="" placeholder="Enter user name" autocomplete="off">
+                    </div>
+                </div>
+                <!-- thgird part -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="profilePic">Profile Image</label>
+                        <div class="left-pd custom-file-upload upload-btn">
+                            <label class="inline_text imagesrc">
+                                <span>
+                                <input type="file" id="profilePic" class="upload" name="profilePic" value="" onchange="PreviewImage($(this),this.id,'uploadPreview');">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="passbookImage">Passbook Image</label>
+                        <div class="left-pd custom-file-upload upload-btn">
+                            <label class="inline_text imagesrc">
+                                <span>
+                                <input type="file" id="passbookImage" class="upload" name="passbookImage" value="" onchange="PreviewImage($(this),this.id,'uploadPreview');">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="panCardImage">Pan Card image</label>
+                        <div class="left-pd custom-file-upload upload-btn">
+                            <label class="inline_text imagesrc">
+                                <span>
+                                <input type="file" id="panCardImage" class="upload" name="panCardImage" value="" onchange="PreviewImage($(this),this.id,'uploadPreview');">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit" id="submitForm">Submit form</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function PreviewImage(element,selectedId,uploadPreview) {
+      var oFReader = new FileReader();
+      oFReader.readAsDataURL(document.getElementById(selectedId).files[0]);
+      oFReader.onload = function (oFREvent) {
+        element.parent('span').next(uploadPreview).remove();
+        element.parent('span').parent('.imagesrc').css('background','none');
+        element.parent('span').parent('.imagesrc').append('<img id="'+uploadPreview+'" src="'+oFREvent.target.result+'" alt="" style="width: 170px; height: 120px; position: relative;"/>');
+      };
+    };
+//     $(document).ready(function() {
+//     $('#companyStartDate').datepicker({
+//         format: 'mm/dd/yyyy',
+//         todayHighlight: true,
+//         autoclose: true
+//     })
+// });
+</script>
+<% include includes/footer.ejs %>

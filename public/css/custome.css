@@ -1,0 +1,59 @@
+.bg-grey{
+    background: #8080801f !important;
+}
+.width80{
+    width: 80%;
+}
+/* ******************* css for upload image ***************** */
+.upload::before {
+    content: 'Select some files';
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .upload:hover::before {
+    border-color: black;
+  }
+  .upload:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+  .custom-file-upload {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 120px;
+  }
+  .custom-file-upload input.upload {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      height: 120px;
+      width: 168px;
+  }
+  .imagesrc {
+    background: url(.././img/img-placeholder.jpg) no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    width: 168px;
+    height: 120px;
+    padding-top: 0px;
+  }
+  
+  /* ******************************* */

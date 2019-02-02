@@ -1,0 +1,68 @@
+<% include includes/header.ejs %>
+        <% include includes/leftsidebar.ejs %>
+                <div class="mainpanel">
+                    <div class="contentpanel">
+                        <div class="row row-stat">
+                          <div class="col-md-6">
+                              <div class="panel panel-danger-head noborder">
+                                  <div class="panel-heading noborder">
+                                      <div class="panel-icon"><i class="fa fa-calendar"></i></div>
+                                      <div class="media-body">
+                                          <h5 class="md-title nomargin">Total Event</h5>
+                                          <h1 class="mt5"><%= stats.eventCount %></h1>
+                                      </div><!-- media-body -->
+                                  </div><!-- panel-body -->
+                              </div><!-- panel -->
+                          </div><!-- col-md-4 -->
+                          <div class="col-md-6">
+                              <div class="panel panel-success-head noborder">
+                                  <div class="panel-heading noborder">
+                                      <div class="panel-icon"><i class="fa fa-users"></i></div>
+                                      <div class="media-body">
+                                          <h5 class="md-title nomargin">Total Users</h5>
+                                          <h1 class="mt5"><%= stats.userCount %></h1>
+                                      </div><!-- media-body -->
+                                  </div><!-- panel-body -->
+                              </div><!-- panel -->
+                          </div><!-- col-md-4 -->
+                            <!-- <div class="col-md-6">
+                                <div class="panel panel-info-alt noborder">
+                                    <div class="panel-heading noborder">
+                                        <div class="panel-icon"><i class="fa fa-thumbs-up"></i></div>
+                                        <div class="media-body">
+                                            <h5 class="md-title nomargin">Total Interests</h5>
+                                            <h1 class="mt5"><%= stats.interestCount %></h1>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div><!-- col-md-4 -->
+
+                            <div class="row row-stat">
+                            <div class="col-md-6">
+                                <div class="panel panel-warning-alt noborder">
+                                    <div class="panel-heading noborder">
+                                        <div class="panel-icon"><i class="fa fa-tags"></i></div>
+                                        <div class="media-body">
+                                            <h5 class="md-title nomargin">Total Category</h5>
+                                            <h1 class="mt5"><%= stats.categoryCount %></h1>
+                                        </div><!-- media-body -->
+                                    </div><!-- panel-body -->
+                                </div><!-- panel -->
+                            </div><!-- col-md-4 -->
+                            <div class="col-md-6">
+                                <div class="panel panel-primary noborder">
+                                    <div class="panel-heading noborder">
+                                        <div class="panel-icon"><i class="fa fa-tags"></i></div>
+                                        <div class="media-body">
+                                            <h5 class="md-title nomargin">Total Sub Category</h5>
+                                            <h1 class="mt5"><%= stats.subCategoryCount %></h1>
+                                        </div><!-- media-body -->
+                                    </div><!-- panel-body -->
+                                </div><!-- panel -->
+                            </div><!-- col-md-4 -->
+
+                          </div>
+                        </div><!-- row -->
+                    </div><!-- contentpanel -->
+                <% include includes/footer.ejs %>
